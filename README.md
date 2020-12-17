@@ -11,7 +11,7 @@ RestApi для простенького багтрекера.
 
 ### Запуск АПИ
 
-* Запустить апи ~/BugTracker.Api> 'dotnet run --urls="https://localhost:5000"'
+* Запустить апи ~/BugTracker.Api> 'dotnet run --urls="https://localhost:5001"'
 * Далее мы можем посмотреть документацию к АПИ - https://localhost:5001/swagger/index.html
 * Набор запросов для проверки в постмане приложен в файле ~/test.postman_collection.json. (не забываем обновлять маркер, в коллекции сохранен уже устаревший маркер).
 
