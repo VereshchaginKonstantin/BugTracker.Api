@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework> 
+    <VersionPrefix>0.0.1</VersionPrefix>
+    <VersionSuffix></VersionSuffix>
+    <Title>Models for BugTracker.</Title>
+    <Authors>Konstantin Vereshchagin</Authors>
+   <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  
+ <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>

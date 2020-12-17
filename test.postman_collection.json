@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "c937f55e-dac5-4725-b804-5e5855622f61",
+		"name": "Багтрекер",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Создаем веху",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n    \"Title\":\"Milestone 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Milestones",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Milestones"
+					]
+				},
+				"description": "1"
+			},
+			"response": []
+		},
+		{
+			"name": "Получаем все вехи",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Milestones",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Milestones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Заводим замечание",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n    \"Subject\":\"Subject 1\",\r\n    \"DetectedVersion\":\"0.0.1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Issues",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Issues"
+					]
+				},
+				"description": "1"
+			},
+			"response": []
+		},
+		{
+			"name": "Получаем список замечаний",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Issues",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Issues"
+					]
+				},
+				"description": "1"
+			},
+			"response": []
+		},
+		{
+			"name": "Обновляем статус",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"issueId\": \"3c92758a-7555-4a34-be29-fddbca58b538\",\r\n    \"subject\": \"Subject 1\",\r\n    \"description\": null,\r\n    \"createdBy\": \"TODO:GetLoginFromToken\",\r\n    \"assignedTo\": null,\r\n    \"status\": 1,\r\n    \"criticality\": 0,\r\n    \"created\": \"2020-12-16T10:00:21.8896395+03:00\",\r\n    \"deadline\": \"0001-01-01T00:00:00\",\r\n    \"milestoneId\": \"6f16a5af-05f7-4daa-a5ff-5eef1610d729\",\r\n    \"detectedVersion\": \"0.0.1\",\r\n    \"releasedVersion\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Issues/3c92758a-7555-4a34-be29-fddbca58b538",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Issues",
+						"3c92758a-7555-4a34-be29-fddbca58b538"
+					]
+				},
+				"description": "1"
+			},
+			"response": []
+		},
+		{
+			"name": "Получаем конкретную веху",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Milestones/86450d67-0a71-43d1-94ed-ccf8451ced69",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Milestones",
+						"86450d67-0a71-43d1-94ed-ccf8451ced69"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаляем веху",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n    \"Subject\":\"Subject 1\",\r\n    \"DetectedVersion\":\"0.0.1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Milestones/cb4c1063-b207-4420-93b7-9ef889609bd7",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Milestones",
+						"cb4c1063-b207-4420-93b7-9ef889609bd7"
+					]
+				},
+				"description": "1"
+			},
+			"response": []
+		},
+		{
+			"name": "Получаем не существующую веху",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Milestones/cb4c1063-b207-4420-93b7-9ef889609bd7",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Milestones",
+						"cb4c1063-b207-4420-93b7-9ef889609bd7"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "tokenType",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "accessToken",
+				"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjRDOUI3NUY4ODVDN0Y5OUY2MDAwQUE3Q0FFOUNCMDk3IiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MDgxMDY4NjksImV4cCI6MTYwODExMDQ2OSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo0MDAwIiwiYXVkIjpbImJ1Z3RyYWNrZXIuYXBpIiwiaHR0cDovL2xvY2FsaG9zdDo0MDAwL3Jlc291cmNlcyJdLCJjbGllbnRfaWQiOiJpbnRlcmFjdGl2ZSIsInN1YiI6ImNjMjJiYjIwLWI1ZjEtNDYxYi05MzI1LWRkY2Q1NjRmNDQwOCIsImF1dGhfdGltZSI6MTYwODEwNjg2OSwiaWRwIjoibG9jYWwiLCJqdGkiOiJBOUEzRkNCNkVDRjZGNjhCOENEOEJCRTgxMjZCMjMwRiIsImlhdCI6MTYwODEwNjg2OSwic2NvcGUiOlsiYnVndHJhY2tlci5hcGkiXSwiYW1yIjpbInB3ZCJdfQ.JK0G41Q_EZBZpyaRU793-iOEWEFTsNvb7kwoLGsQW4f9Qr3wsvtL6qL9erOmLzptJPvf5oXqiaZxXrpJ1__gsiNpUTzUSnf7mxhcxp4NK3QUhKHzoTIbcY51lpcCZSdo5fCaxdU8HKRBP3IvmaBa2IAOiyr3Kzfe0wW-8ZI5eGQTJmwLgfKEL8LfhlzFjZwvBsYpdH71OPEKli-qD1djWGTHpiCtBqZ3dv1VThcZTjzKlZmqN3-mEqdCdLE9hR5oNNl8yYC-ygf1xxaeAZLaB3rrly73XzRf89Zdmj7tYFxGgm60cCW-kukCZR24zZzsXVqBcJwNQylAhAho0QHDvQ",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "bob",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "bugtracker.api",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "http://localhost:4000/connect/token",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "Pass123$",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "49C1A7E1-0C79-4A89-A3D6-A37998FB86B0",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "interactive",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "password_credentials",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "isforbugtracker",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "73e9fbd3-16e5-419c-bf38-85ae27a422c5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "71d0dccc-1cfc-4a5b-8fea-2f46dc2bb353",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
